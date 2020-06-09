@@ -6,29 +6,19 @@
     <description>Recent content on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 02 Jun 2020 13:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 23:35:00 +0800</lastBuildDate>
     
 	<atom:link href="https://HJ-Kurt-Su.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Markdown Reference</title>
-      <link>https://HJ-Kurt-Su.github.io/blog/reference/</link>
-      <pubDate>Tue, 02 Jun 2020 13:30:00 +0800</pubDate>
+      <title>部落格緣起</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</link>
+      <pubDate>Tue, 09 Jun 2020 23:35:00 +0800</pubDate>
       
-      <guid>https://HJ-Kurt-Su.github.io/blog/reference/</guid>
-      <description>Hello World!!
-Reference Rule
-Title: Title Lv1 Title Lv2 Title Lv6 Font Type: Reference for font type Bold Type &amp;amp; Slash</description>
-    </item>
-    
-    <item>
-      <title>How To Use Checklists To Improve Your UX</title>
-      <link>https://HJ-Kurt-Su.github.io/blog/post-13/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
-      
-      <guid>https://HJ-Kurt-Su.github.io/blog/post-13/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <guid>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</guid>
+      <description>Photo by Anete Lūsiņa on Unsplash
+Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課：從個人品牌到自媒體 部落格緣起:  身為一個工程師，當然要用工程師的方式來展示自己啦</description>
     </item>
     
   </channel>
