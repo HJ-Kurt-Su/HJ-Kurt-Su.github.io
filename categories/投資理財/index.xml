@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Kurt&#39;s Home (Phonon Observer)</title>
-    <link>https://HJ-Kurt-Su.github.io/blog/</link>
-    <description>Recent content in Blogs on Kurt&#39;s Home (Phonon Observer)</description>
+    <title>投資理財 on Kurt&#39;s Home (Phonon Observer)</title>
+    <link>https://HJ-Kurt-Su.github.io/categories/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/</link>
+    <description>Recent content in 投資理財 on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 09 Jun 2020 23:35:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2019 22:00:00 +0800</lastBuildDate>
     
-	<atom:link href="https://HJ-Kurt-Su.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://HJ-Kurt-Su.github.io/categories/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>部落格緣起</title>
-      <link>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</link>
-      <pubDate>Tue, 09 Jun 2020 23:35:00 +0800</pubDate>
-      
-      <guid>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</guid>
-      <description>Photo by Anete Lūsiņa on Unsplash
-Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課：從個人品牌到自媒體 部落格緣起:  身為一個工程師，當然要用工程師的方式來展示自己啦</description>
-    </item>
     
     <item>
       <title>回測投資組合在各時期的表現</title>
