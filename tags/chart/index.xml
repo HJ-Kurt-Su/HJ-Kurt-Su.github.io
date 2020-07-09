@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>心得 on Kurt&#39;s Home (Phonon Observer)</title>
-    <link>https://HJ-Kurt-Su.github.io/categories/%E5%BF%83%E5%BE%97/</link>
-    <description>Recent content in 心得 on Kurt&#39;s Home (Phonon Observer)</description>
+    <title>Chart on Kurt&#39;s Home (Phonon Observer)</title>
+    <link>https://HJ-Kurt-Su.github.io/tags/chart/</link>
+    <description>Recent content in Chart on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Thu, 09 Jul 2020 22:20:00 +0800</lastBuildDate>
     
-	<atom:link href="https://HJ-Kurt-Su.github.io/categories/%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://HJ-Kurt-Su.github.io/tags/chart/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Photo by Lukas Blazek on Unsplash
  本篇是實體課程Google 圖表簡報術李柏鋒老師部分的課後心得整理
  TL;DR  好的圖表能提高理解資料的效率 要表達的目的決定該圖表的重點與雜訊，淡化雜訊後再加強重點 立體圖、圓餅圖、非零原點與雙軸圖是需要避免的圖表顯示方式  何謂圖表 在介紹圖表誤區前，先簡單定義一下何謂圖表，以及什麼是好的圖表。</description>
-    </item>
-    
-    <item>
-      <title>部落格緣起</title>
-      <link>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</link>
-      <pubDate>Tue, 09 Jun 2020 23:35:00 +0800</pubDate>
-      
-      <guid>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</guid>
-      <description>Photo by Anete Lūsiņa on Unsplash
-Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課：從個人品牌到自媒體 部落格緣起:  身為一個工程師，當然要用工程師的方式來展示自己啦</description>
     </item>
     
   </channel>

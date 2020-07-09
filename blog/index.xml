@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 26 Jun 2020 17:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2020 22:20:00 +0800</lastBuildDate>
     
 	<atom:link href="https://HJ-Kurt-Su.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>基本圖表介紹與常見誤區</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20200709-notice-item-chart/</link>
+      <pubDate>Thu, 09 Jul 2020 22:20:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/blog/20200709-notice-item-chart/</guid>
+      <description>Photo by Lukas Blazek on Unsplash
+ 本篇是實體課程Google 圖表簡報術李柏鋒老師部分的課後心得整理
+ TL;DR  好的圖表能提高理解資料的效率 要表達的目的決定該圖表的重點與雜訊，淡化雜訊後再加強重點 立體圖、圓餅圖、非零原點與雙軸圖是需要避免的圖表顯示方式  何謂圖表 在介紹圖表誤區前，先簡單定義一下何謂圖表，以及什麼是好的圖表。</description>
+    </item>
     
     <item>
       <title>介紹 Engauge Digitizer 工具</title>
