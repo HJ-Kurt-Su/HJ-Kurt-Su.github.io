@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Introduction of Engauge Digitizer. Inverse Engineering Tool of Chart/ 介紹 Engauge Digitizer 軟體. 圖表逆向工程工具">
+  <meta name="description" content="LnB 心得 &amp; return rate after 1 year / LnB 使用心得與一年報酬率試算">
   <meta name="author" content="Kurt Su">
   <meta name="generator" content="Hugo 0.71.0" />
 
@@ -102,80 +102,118 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <a href="/categories/software"
-          class="text-primary">Software</a>
+        <a href="/categories/%e6%8a%95%e8%b3%87%e7%90%86%e8%b2%a1"
+          class="text-primary">投資理財</a>
         
-        <h2>介紹 Engauge Digitizer 工具</h2>
+        <h2>LnB 信用市集使用心得與報酬計算</h2>
         <div class="mb-3 post-meta">
           <span>By Kurt Su</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>26 June 2020</span>
+          <span>03 August 2020</span>
           
         </div>
         
-        <img src="https://HJ-Kurt-Su.github.io/images/post/isaac-smith-6EnTPvPPL6I-unsplash-small.jpg" class="img-fluid w-100 mb-4" alt="介紹 Engauge Digitizer 工具">
+        <img src="https://HJ-Kurt-Su.github.io/images/post/steve-johnson-WVUrbhWtRNM-unsplash-small.jpg" class="img-fluid w-100 mb-4" alt="LnB 信用市集使用心得與報酬計算">
         
         <div class="content mb-5">
-          <p>Photo by <a href="https://unsplash.com/@isaacmsmith?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Isaac Smith</a> on <a href="https://unsplash.com/s/photos/chart?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
-<p><a href="http://markummitchell.github.io/engauge-digitizer/">Engauge Digitizer Website</a></p>
-<p><a href="https://github.com/markummitchell/engauge-digitizer/releases">Download Page</a></p>
-<h4 id="license">License</h4>
-<p>Engauge Digitizer follow <strong>GPL v2.0</strong> 的開源協議，所以基本上不把它包在自己的產品內賣錢的話，所有人都可以<strong>無償使用</strong></p>
-<h3 id="適用範圍">適用範圍:</h3>
-<p>Engauge Digitizer (以下簡稱Engauge) 是一套圖片資料逆向工程的工具。比較多的適用範圍如下:</p>
-<ol>
-<li>
-<p>只有圖檔(曲線圖)，但是沒有原始資料時，是無法對資料進一步分析或拆解。</p>
-</li>
-<li>
-<p>不同的資料來源(例如不同廠商)，彼此間圖檔格式，大小不同不方便比較時，沒有原始資料時無法將結果整合成同一張圖片</p>
-</li>
-</ol>
-<h3 id="舉例">舉例:</h3>
-<p>如果是像下圖(<em>Fig.1</em>)的狀況，兩家廠商乍看之下，第二家廠商的分布範圍較大。但是細看下其實兩張圖的Y軸範圍不一樣，第二家廠商其實是分布較小的廠商</p>
-<p>如果需要統整兩張圖的結果，卻沒有raw data可以重新畫圖的話，會是非常麻煩而且還要另外解釋的狀況。這時候<strong>Engauge</strong>就可以派上用場了。</p>
-<p><em>Fig.1</em></p>
-<p><img src="/images/post/ED-issue-compare.jpg" alt=""></p>
-<h3 id="使用概念">使用概念:</h3>
-<p>Engauge 是導入原始圖檔後，手動定義出 X 與 Y 軸的上下限值 (設定邊界)，再利用手動或自動的方式辨識圖檔內的曲線，完成後即可輸出raw data。概念如下圖(<em>Fig.2</em>)</p>
-<p><em>Fig.2</em>  <a href="http://markummitchell.github.io/engauge-digitizer/">From Official Website</a></p>
-<p><img src="/images/post/ED-ProcessFlowchart.png" alt=""></p>
-<h3 id="使用步驟">使用步驟:</h3>
-<h5 id="工具列常用按鈕簡介-fig3">工具列常用按鈕簡介 (<em>Fig.3</em>):</h5>
-<ul>
-<li>箭頭為點選工具。</li>
-<li>帶紅點者為第一步，標定 X, Y 軸與上下限。</li>
-<li>帶藍點為手動點選來標定位置</li>
-<li>滴管為用顏色選取</li>
-<li>綠色為分段選取工具，在有格線的圖特別好用，可以直接選取每個格線內的整段曲線</li>
-</ul>
-<p><em>Fig.3</em></p>
-<p><img src="/images/post/ED-toolbar.png" alt=""></p>
-<h5 id="步驟">步驟:</h5>
-<ol>
-<li>
-<p>導入圖檔 (PDF 檔也可以，只會多一道截圖的步驟)，並且在此步驟決定有幾條曲線要標定，且填寫名稱。基本上可以一直按 next 即可。如<em>Fig.4</em>。</p>
-</li>
-<li>
-<p>藉由點出三個點標記出 X, Y 軸並輸入上下限值 (設定邊界)。<strong>注意</strong>, Y 軸在此例中是從 8 而不是從 0 開始。如<em>Fig.5</em>。</p>
-</li>
-<li>
-<p>手動/自動或混和標點。此例中我是用純手動點選，如果不小心手滑點歪的話，也可以按箭頭然後抓取歪掉的點調整。曲線特性也可以選是平滑或是直線，此例中我選擇直線。。如<em>Fig.6</em>。</p>
-</li>
-<li>
-<p>輸出 raw data。選取 <em>File</em> → <em>Export</em> 就會有存檔的對話框，選定好存檔位置與名稱後就得到 raw data 了。大功告成!</p>
-</li>
-<li>
-<p>如果有可能修改，也可以存成特有的 DIG 檔案，所有的參數與點位都會保存。</p>
-</li>
-</ol>
-<p><em>Fig.4</em></p>
-<p><img src="/images/post/ED-import-1.jpg" alt=""></p>
-<p><em>Fig.5</em></p>
-<p><img src="/images/post/ED-boundary-2.png" alt=""></p>
-<p><em>Fig.6</em></p>
-<p><img src="/images/post/ED-point-3.jpg" alt=""></p>
+          <p>Photo by <a href="https://unsplash.com/@steve_j?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Steve Johnson</a> on <a href="https://unsplash.com/s/photos/loan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<blockquote>
+<p>此為Hahow 線上課程 <a href="https://hahow.in/courses/5c18f9c611b27900205c9ff5/main?mts_s=ap&amp;mts_m=ha&amp;oasId=5de5b4d0adb04100214d3bca">打造被動收入</a>的作業之一。加入實作一年後的報酬率與心得評估</p>
+</blockquote>
+<blockquote>
+<p><strong>信用市集</strong>: 感覺起來介面較先進且友善，有蘿蔔投+可以自行分散金額到不同案件。
+<a href="https://www.lnb.com.tw/activity/mgm/1/EQTI139/1161279609">LnB 推薦連結</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.lend.com.tw/index.html">鄉民貸</a>: 有簽署&rdquo; 網路借貸資訊中介業者自律規範&rdquo;，需要加入進階會員才會優先接到案件</p>
+</blockquote>
+<h4 id="什麼是p2p借貸">什麼是P2P借貸:</h4>
+<p>P2P借貸的概念為分散風險的多筆小額借貸。以傳統的借款來說，首要的就是出借閒置資金的管道很少。而小資族就算出借五或六位數給認識的人，也會擔心能不能全部回收。只要被倒帳一次，都是對資產上的一次打擊，更別說借貸如何計算相對應的利息。</p>
+<p>而所謂的P2P借貸，則是建立一個平台媒合有閒置資金與有資金需求的人。而我認為對有閒置資金者最大的優勢為可以分散成多筆小額(台幣一千起跳)借貸。</p>
+<p>因此在大部分借貸者都會努力還款的前提下，大部分投資的資金可以拿到該有的利息。不會因為單一次的借貸失敗導致資產受損。</p>
+<p>平台也會做好初步的徵信，並訂出相對應的貸款利率，投資人也免去了處理利率這部分的工作。</p>
+<h4 id="初步比較表">初步比較表</h4>
+<p>台灣目前有兩個主要的P2P平台，初步的比較如下:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>信用市集</td>
+<td>鄉民貸</td>
+<td>Remark</td>
+</tr>
+<tr>
+<td>平台安全性</td>
+<td>風險保護比例</td>
+<td>簽署 自律規範</td>
+<td></td>
+</tr>
+<tr>
+<td>案件數量</td>
+<td> 多</td>
+<td>多</td>
+<td></td>
+</tr>
+<tr>
+<td>介面友善度</td>
+<td>好</td>
+<td>普通</td>
+<td></td>
+</tr>
+<tr>
+<td>接案方便性</td>
+<td>蘿蔔投，可自行分散風險投資</td>
+<td>進階會員才有優先性，一般會員需要再評估，用Line通知案件</td>
+<td>信用市集的蘿蔔投較適合被動收入的取向</td>
+</tr>
+<tr>
+<td>手續費</td>
+<td>單次投資: <strong>1.7%</strong> 帳管費: 剩餘本金 <strong>0.85%</strong> 按月收取</td>
+<td>申請進階: <strong>1000</strong> 單次投資: <strong>1.5%</strong> 帳管費: 利息1/10</td>
+<td></td>
+</tr>
+<tr>
+<td>其他</td>
+<td>註冊完有專員連繫，介紹運作方式且直接回覆相關問題</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>評估過後，因為信用市集有蘿蔔投的投資方式，可以藉由機器人自行找尋案件並分散風險投入，可以花比較少時間在操作上，適合被動收入的精神。</p>
+<h4 id="蘿蔔投與自選投資">蘿蔔投+與自選投資</h4>
+<p>LnB 信用市集有兩類投資方式，我比較推薦的是<strong>蘿蔔投+</strong>，首先設定好自己的預期的報酬程度，目前只有平衡型與積極型。我目前選擇的是平衡型。</p>
+<p>PS. 須注意兩種設定所收取的申購手續費與帳戶管理費比例並不同。積極型收取的比例較高。</p>
+<p>另外一種則是<strong>自選方案</strong>，需要自己尋找與選擇案件，比較沒那麼符合被動收入的目標。但若是將閒置資金都放款後，就不需要一直花時間在尋找案件。頂多每個月拿到利息後再花些時間選擇案件投入。</p>
+<p>評估後於<strong>2019/9月底</strong>投入7萬到信用市集的<strong>蘿蔔投+</strong>，利用機器人自動投資。投入3萬到一般代收代付主動選取案件投資，一年後檢視報酬率與違約率再來評估是否可以加碼投資。</p>
+<h4 id="202007-報酬率檢視">2020/07 報酬率檢視</h4>
+<h5 id="蘿蔔投--20200725-約十個月">蘿蔔投+ @ 2020/07/25 (約十個月)</h5>
+<p><img src="/images/post/LnB-automatic_return.jpg" alt=""></p>
+<p>首先是蘿蔔投+投入資金的速度很快，匯入資金後大約兩個禮拜內就全部投入案件。而由LnB自己的報表可以得知目前平台計算的為13.1%。但純粹從現值與投入金額的年化報酬率約<strong>10.7%</strong>(不考慮手續費)。若是將手續費考慮進來則年化報酬率降為<strong>7%</strong>。平台手續費大約吃掉<strong>三成</strong>的報酬。</p>
+<p>而依照目前的報酬率，比預估的報酬稍微低一些，但沒有低太多。我認為在收款較長期之後，報酬率應該會再上升一些。這個是純粹感覺，沒有任何依據。</p>
+<h5 id="自選方案--20200725-約十個月">自選方案 @ 2020/07/25 (約十個月)</h5>
+<p><img src="/images/post/LnB-choose_return.jpg" alt=""></p>
+<p>自選方案的報表與蘿蔔投+的表示方式差蠻多的。這讓我蠻訝異的，同一個平台卻對數據表達方式截然不同。我認為蘿蔔投+的表示方式較好，清楚顯示投入本金，現值(包含與不包含手續費)，方便計算報酬率。</p>
+<p>我以目前實收的訊息來看，年化報酬率會落在 <strong>7.3~10.2%</strong> 之間，跟蘿蔔投+的報酬差不多。</p>
+<h4 id="蘿蔔投的優缺點">蘿蔔投+的優缺點</h4>
+<p>我認為蘿蔔投最大優點就是全自動化的投入，幾乎是完全無腦的將資產投入。當累積資產的時候會非常方便。在初期非常推薦使用蘿蔔投+投資。</p>
+<p>缺點則是當要領取現金流時，需要設定賣出案件。這個部分之後有機會會再操作看看。</p>
+<h4 id="自選方案的優缺點">自選方案的優缺點</h4>
+<p>自選方案則是需要自己投入案件，好處是表面上的掌控性較高。但我不喜歡的一點是每月15日是結算日，超過1000元的部分會自動匯出到連結的銀行帳戶。這在累積資產期間反而很不方便，因為這時候領到的利息通常會再次投入案件，才能享受到複利的效果。但是目前也找不到可以關掉的選項。</p>
+<h4 id="總結">總結</h4>
+<p>觀察到目前為止，LnB信用市集的報酬率算是接近我的預期。但不如表面上十幾趴的年化報酬率那麼高。因為有一部分的案件發生遲繳或是倒帳的狀況，以及申購手續費造成的影響。</p>
+<p>所以若要依此打造被動收入的來源，應該要使用 <strong>7~8%</strong> 的預期報酬率來評估，如此才不會因為高估報酬率導致實際的被動收入不如預期。</p>
+<p>以結果來評估，信用市集這類P2P借貸算是穩定的被動收入來源。或許是台灣防疫的確做的不錯，之前疫情期間的股災下，印象中違約率也沒有明顯飆升。所以可以將P2P借貸配置一部分來增加不同的收入來源，打造更多元的資產配置。</p>
+<p>如果有興趣嘗試，歡迎點擊<a href="https://www.lnb.com.tw/activity/mgm/1/EQTI139/1161279609">連結</a>加入。可以獲得回饋金，進一步降低申購手續費對報酬的影響。</p>
 
         </div>
 
