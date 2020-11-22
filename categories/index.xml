@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 03 Aug 2020 22:45:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2020 21:45:00 +0800</lastBuildDate>
     
 	<atom:link href="https://HJ-Kurt-Su.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://HJ-Kurt-Su.github.io/categories/statistics/</link>
+      <pubDate>Sun, 22 Nov 2020 21:45:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/categories/statistics/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>投資理財</title>
