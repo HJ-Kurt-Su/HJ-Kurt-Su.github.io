@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Kurt&#39;s Home (Phonon Observer)</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="利用線性迴歸的方式找出單自由度自然振動衰減的阻尼係數，得到更穩定的結果">
+  <meta name="author" content="Kurt Su">
+  <meta name="generator" content="Hugo 0.71.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://HJ-Kurt-Su.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://HJ-Kurt-Su.github.io/images/favicon.png " type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://HJ-Kurt-Su.github.io"><img class="img-fluid"
+          src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/kurt-su-503a2a71/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/kurt.su.9"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/HJ-Kurt-Su"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://HJ-Kurt-Su.github.io"><img class="img-fluid"
+            src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://HJ-Kurt-Su.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://HJ-Kurt-Su.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/statistics"
+          class="text-primary">Statistics</a>
+        
+        <h2>如何利用線性迴歸（Linear Regression）分析計算阻尼係數（Damping Ratio）</h2>
+        <div class="mb-3 post-meta">
+          <span>By Kurt Su</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>03 February 2021</span>
+          
+        </div>
+        
+        <img src="https://HJ-Kurt-Su.github.io/images/post/kelly-sikkema-jrFNMM6K0VI-unsplash-small.jpg" class="img-fluid w-100 mb-4" alt="如何利用線性迴歸（Linear Regression）分析計算阻尼係數（Damping Ratio）">
+        
+        <div class="content mb-5">
+          <p>Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Unsplash</a></p>
+
+<h3 id="什麼是阻尼係數有什麼用">什麼是阻尼係數？有什麼用？</h3>
+
+<p>什麼是阻尼？阻尼是振動領域很常使用的一個性質，主要特性是能抵銷能量，且抵銷能量的能力會隨著速度越快而越強大。
+以下引述<a href="https://zh.m.wikipedia.org/zh-tw/%E9%98%BB%E5%B0%BC">維基百科</a>：</p>
+
+<blockquote>
+<p>阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</p>
+
+<p>一個有阻尼的彈簧振子振動示意圖。從振動形式看，這是一個次阻尼體系。
+在實際振動中，由於摩擦力總是存在的，所以振動系統最初所獲得的能量，在振動過程中因阻力不斷對系統做負功，使得系統的能量不斷減少，振動的強度逐漸減弱，振幅也就越來越小，以至於最後的停止振動，像這樣的因系統的力學能，由於摩擦及轉化成內能逐漸減少，振幅隨時間而減弱振動，稱為阻尼振動。</p>
+</blockquote>
+
+<p>所以阻尼特性就是決定物體受外力擾動後，振動多久才會停止的特性。
+為了定義阻尼的大小，所以有了阻尼係數來評估。
+但不是阻尼越大越好，有些門的設計是會慢慢自動關上，用力去關反而會產生很大的阻力還不會快多少，這就是過阻尼的狀況。</p>
+
+<h3 id="計算阻尼係數的兩種方式絕對與相對">計算阻尼係數的兩種方式：絕對與相對</h3>
+
+<p>所以能知道一個物體 （系統）的阻尼係數對判斷反應時間的特性上就非常重要。實務上我們可以讓物體自由震盪，並量測反應過程的特性如位移，加速度對上時間的曲線。
+通常單自由度的系統會產生如下圖的隨時間而衰減的曲線，阻尼係數則是決定衰減速度快慢的因素之一(另外一個因素是自然振動頻率)。</p>
+
+<p><figure><img src="/images/post/natural-decay.png" alt="自然衰減.png"></figure></p>
+
+<p>利用傅立葉轉換成頻譜就可以得到自然振動頻率。只要找出需要多少時間收斂，就可以進而計算該物體的阻尼係數。</p>
+
+<p>而如何找出收斂時間呢? 基本上有兩種做法，分別是<strong>絕對</strong>與<strong>相對</strong>。</p>
+
+<h5 id="絕對">絕對</h5>
+
+<p>絕對的評估方式是，當震盪的 peak 值小於某個數值以下，就視為已收斂。</p>
+
+<blockquote>
+<p>PS. 將 Raw data 進行傅立葉轉換與找出 local peak 可以使用程式語言進行運算。我個人是利用 Python 內的 SciPy package.</p>
+</blockquote>
+
+<p>但是絕對的方式有幾個問題，第一個是到底收斂到多小的數值才算收斂？第二個問題是當振幅越大時，所得到的收斂時間就會大於振幅小的情況，就算兩者的阻尼係數與頻率均相同。如下圖：</p>
+
+<p><figure><img src="/images/post/different-amplitude-compare.png" alt="振幅差異比較.png"></figure></p>
+
+<blockquote>
+<p>兩者的阻尼係數與頻率均相同，但是使用絕對的方式評估下會得到不同的收斂時間</p>
+</blockquote>
+
+<h5 id="相對">相對</h5>
+
+<p>相對的意思則是當震盪的 peak 值小於最大值的一定比例(比如收斂到小於 2%)，視為已收斂。
+相較之下，相對的方式就會比較合理，可以排除振幅不同造成的影響。</p>
+
+<h3 id="利用線性迴歸分析計算阻尼係數">利用線性迴歸分析計算阻尼係數</h3>
+
+<p>而是否只能藉由找出時間才能計算阻尼係數呢? 其實有另外更適合的方式，那就是採用線性迴歸來計算。
+藉由剛剛的例子，本身收斂的包絡線會依照以下公式衰減。</p>
+
+<p><span  class="math">\[ y=Ae^{-2 \pi \zeta f t} \]</span></p>
+
+<p>其中 <span  class="math">\(\zeta\)</span>  是阻尼係數， <span  class="math">\(\pi\)</span> 是圓周率， <span  class="math">\(f\)</span>是自然振動頻率</p>
+
+<p><figure><img src="/images/post/envolope.png" alt="包絡線.png"></figure></p>
+
+<blockquote>
+<p>灰色虛線為包絡線</p>
+</blockquote>
+
+<p>所以當 <span  class="math">\(f\)</span> 已知(藉由傅立葉轉換)的狀況下，求出 <span  class="math">\(\zeta\)</span> 就會相對簡單。</p>
+
+<p>而求出阻尼係數是如何與<a href="https://zh.wikipedia.org/wiki/%E8%BF%B4%E6%AD%B8%E5%88%86%E6%9E%90">線性迴歸</a>有關係呢?其實只要簡單的做一下轉換 (公式兩邊取對數) 就可以把原本指數衰減 (Exponential decay) 轉換成線性公式</p>
+
+<p><span  class="math">\[ \ln y=\ln A -2 \pi \zeta f t \implies     Y = \beta_0 + \beta_1 t \]</span></p>
+
+<p>其中 <span  class="math">\(-2 \pi \zeta f\)</span> 就是 <span  class="math">\(\beta_1\)</span> ，也就是直線的斜率。</p>
+
+<p><figure><img src="/images/post/natural-log-transform.png" alt="對數轉換.png"></figure></p>
+
+<blockquote>
+<p>藍色為原本的包絡線，紅色為對數轉換後的包絡線。可以明顯看出轉換後唯一直線。</p>
+
+<p>利用程式 (如 Python, R 甚至是 Excel) 即可計算出 <span  class="math">\(\beta_1\)</span> 的最佳估計值。<a href="http://www.math.nsysu.edu.tw/~lomn/homepage/R/R_regression.htm">參考公式</a></p>
+</blockquote>
+
+<p>總結一下利用自然震動的衰減資料找出阻尼係數的步驟:</p>
+
+<ol>
+<li>利用傅立葉轉換計算出自然振動頻率 (Python Scipy package)</li>
+<li>找出 local peak 值與相對應的時間點位 (Python Scipy package)</li>
+<li>對 local peak 的 Y 軸資料取自然對數 (natural log)，轉換成直線</li>
+<li>針對轉換後的資料進行迴歸分析，求得斜率 <span  class="math">\(\beta_1\)</span> ，將 <span  class="math">\(\beta_1\)</span> 除以自然振動頻率即可得到阻尼係數 <span  class="math">\(\zeta\)</span> 。</li>
+</ol>
+
+<p>如此一來，我們就可以計算出上述例子的阻尼係數為。該例估計的 <span  class="math">\(\beta_1\)</span> 為 -0.1，而自然頻率為 0.16Hz，所以得到阻尼係數為 0.0995。</p>
+
+<blockquote>
+<p>PS. 本篇主要介紹如何利用迴歸分析計算阻尼係數的概念，計算自然頻率、找出 local peak 以及迴歸分析的程式碼會其他相關文章再詳細介紹。</p>
+</blockquote>
+
+<h3 id="使用迴歸分析的好處">使用迴歸分析的好處？</h3>
+
+<p>用回歸分析來找阻尼係數看起來需要用到對數轉換與統計分析，似乎比起用相對的方式找出時間要麻煩許多，但是這個方式在實務使用上有許多優勢：</p>
+
+<ul>
+<li>量測資料非理想資料，會有環境、設備等誤差影響造成誤判。使用迴歸分析可以將所有點納入考量，不受特定點偏差的影響。</li>
+</ul>
+
+<p><figure><img src="/images/post/decay-not-good.png" alt="not good.png"></figure></p>
+
+<blockquote>
+<p>這張圖是實務上量測出來的數據，可以看出約 3 秒後的數據受到雜訊擾動</p>
+</blockquote>
+
+<ul>
+<li>轉換成直線而非曲線，適合肉眼直接觀察，檢測出差異，並且例用迴歸分析的 <span  class="math">\(R^2\)</span> 的數值來量化收斂狀況是否穩定。如下列圖組表示:</li>
+</ul>
+
+<p><figure><img src="/images/post/G-Level-original.png" alt="G Level 原始數據.png"></figure></p>
+
+<blockquote>
+<p>這張圖為實務上原始數據</p>
+</blockquote>
+
+<p><figure><img src="/images/post/G-Level-envolope.png" alt="G Level 包絡線.png"></figure></p>
+
+<blockquote>
+<p>此圖為包絡線的原始數據，要看出其收斂的穩定性有相對難度。</p>
+</blockquote>
+
+<p><figure><img src="/images/post/Ln-G-envolope.png" alt="Ln G 包絡線.png"></figure></p>
+
+<blockquote>
+<p>可以看出前段 (3 秒前， <span  class="math">\(LnG > -4\)</span> 前)收斂相對穩定 (接近直線)。3 秒後的數值比較雜亂，應該是數值較低，受到雜訊的影響程度較高。</p>
+</blockquote>
+
+<p><figure><img src="/images/post/damping-regression.png" alt="Regression.png"></figure></p>
+
+<blockquote>
+<p>若排除 <span  class="math">\(LnG < -4\)</span> 的數據後進行迴歸分析，得到 <span  class="math">\(R^2 = 0.9935\)</span>，表示收斂性非常穩定。</p>
+</blockquote>
+
+<ul>
+<li>只需要足夠的資料進行迴歸分析，不需要一定等到收斂完成才能進行判讀。傳統方法上，如果設定的閥值 (Threshhold) 太小，在記錄資料的時間不足下，抓不到收斂時間，也就無法依此計算阻尼係數。但使用迴歸分析的方式，只要有足夠的 local peaks (大約 15~20 點) ，即可計算出阻尼係數。</li>
+</ul>
+
+<p>線性迴歸分析雖然是很基礎的統計分析工具，但是卻非常萬用，很多生活/工作上的不同場景都有機會套用。像本文介紹的，使用統計分析的眼睛去看數據，可以得到完全不同的分析方式，得到更穩定，更合理的分析結果。</p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hj-kurt-su" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <a href="https://HJ-Kurt-Su.github.io"><img src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark" href="tel:09xx-xxx-x99"><i
+                class="ti-mobile mr-3 text-primary"></i>09xx-xxx-x99</a></li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Taiwan</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:phononobserver@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>phononobserver@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/kurt-su-503a2a71/">linkedin</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/kurt.su.9">facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://github.com/HJ-Kurt-Su">github</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/software">Software</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/statistics">Statistics</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/%e5%bf%83%e5%be%97">心得</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/%e6%8a%95%e8%b3%87%e7%90%86%e8%b2%a1">投資理財</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://HJ-Kurt-Su.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2020 <a href="https://themefisher.com">Themefisher</a> All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://HJ-Kurt-Su.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/mark.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://HJ-Kurt-Su.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-168546008-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script></body>
+</html>

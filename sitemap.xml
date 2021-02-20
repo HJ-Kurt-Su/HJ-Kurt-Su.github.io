@@ -3,27 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://HJ-Kurt-Su.github.io/tags/assest-allocation/</loc>
-    <lastmod>2020-12-27T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://HJ-Kurt-Su.github.io/blog/</loc>
-    <lastmod>2020-12-27T21:30:00+08:00</lastmod>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://HJ-Kurt-Su.github.io/categories/</loc>
-    <lastmod>2020-12-27T21:30:00+08:00</lastmod>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/damping-ratio/</loc>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://HJ-Kurt-Su.github.io/</loc>
-    <lastmod>2020-12-27T21:30:00+08:00</lastmod>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/linear-regression/</loc>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://HJ-Kurt-Su.github.io/categories/statistics/</loc>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://HJ-Kurt-Su.github.io/tags/</loc>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</loc>
+    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/assest-allocation/</loc>
     <lastmod>2020-12-27T21:30:00+08:00</lastmod>
   </url>
   
@@ -49,11 +69,6 @@
   
   <url>
     <loc>https://HJ-Kurt-Su.github.io/tags/probability/</loc>
-    <lastmod>2020-11-22T21:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://HJ-Kurt-Su.github.io/categories/statistics/</loc>
     <lastmod>2020-11-22T21:45:00+08:00</lastmod>
   </url>
   

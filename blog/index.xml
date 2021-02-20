@@ -6,10 +6,21 @@
     <description>Recent content in Blogs on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 27 Dec 2020 21:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Feb 2021 21:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://HJ-Kurt-Su.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何利用線性迴歸（Linear Regression）分析計算阻尼係數（Damping Ratio）</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</link>
+      <pubDate>Wed, 03 Feb 2021 21:30:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</guid>
+      <description>Photo by Kelly Sikkema on Unsplash
+什麼是阻尼係數？有什麼用？ 什麼是阻尼？阻尼是振動領域很常使用的一個性質，主要特性是能抵銷能量，且抵銷能量的能力會隨著速度越快而越強大。 以下引述維基百科：
+ 阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</description>
+    </item>
     
     <item>
       <title>與理財顧問規劃財務計畫心得</title>
