@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Kurt&#39;s Home (Phonon Observer)</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="利用線性迴歸的方式找出材料的彈性係數直線段，獲得更準確的斜率">
+  <meta name="author" content="Kurt Su">
+  <meta name="generator" content="Hugo 0.111.3">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://HJ-Kurt-Su.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://HJ-Kurt-Su.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://HJ-Kurt-Su.github.io/images/favicon.png " type="image/x-icon">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJM7YLR729"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KJM7YLR729');
+</script>
+
+  
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://HJ-Kurt-Su.github.io"><img class="img-fluid"
+          src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/kurt-su-503a2a71/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/kurt.su.9"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/HJ-Kurt-Su"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://HJ-Kurt-Su.github.io"><img class="img-fluid"
+            src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://HJ-Kurt-Su.github.io/about">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://HJ-Kurt-Su.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/statistics"
+          class="text-primary">Statistics</a>
+        
+        <h2>如何利用線性迴歸（Linear Regression）計算材料的彈性模數 (Modulus)</h2>
+        <div class="mb-3 post-meta">
+          <span>By Kurt Su</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>18 April 2021</span>
+          
+        </div>
+        
+        <img src="https://HJ-Kurt-Su.github.io/images/post/lucas-lenzi-hitgiH3QGMs-unsplash-small.jpg" class="img-fluid w-100 mb-4" alt="如何利用線性迴歸（Linear Regression）計算材料的彈性模數 (Modulus)">
+        
+        <div class="content mb-5">
+          <p>Photo by <a href="https://unsplash.com/@lucaslenzi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lucas Lenzi</a> on <a href="https://unsplash.com/s/photos/material?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<h3 id="什麼是彈性模數">什麼是彈性模數?</h3>
+<p>以下引述<a href="https://zh.wikipedia.org/wiki/%E6%9D%A8%E6%B0%8F%E6%A8%A1%E9%87%8F">維基百科</a></p>
+<blockquote>
+<p>楊氏模數，也稱楊氏模數（英語：Young&rsquo;s modulus），一般將楊氏模數習慣稱爲彈性模量，是材料力學中的名詞。彈性材料承受正向應力時會產生正向應變，在形變量沒有超過對應材料的一定彈性限度時，定義正向應力與正向應變的比值為這種材料的楊氏模數。公式記為</p>
+</blockquote>
+<p>$$E={\frac {\sigma }{\varepsilon }}$$</p>
+<blockquote>
+<p>其中，$E$ 表示楊氏模數，$\sigma$  表示正向應力，$\varepsilon$ 表示正向應變。</p>
+</blockquote>
+<p><img src="/images/post/youngs-modulus-demo.png" alt="moudulus demo"></p>
+<blockquote>
+<p>Nicoguaro, CC BY 4.0 <a href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>, via Wikimedia Commons</p>
+</blockquote>
+<h3 id="為什麼需要使用迴歸分析">為什麼需要使用迴歸分析?</h3>
+<p>楊氏模數是評估材料強度的重要參數之一，所以需要盡可能得到準確的楊氏模數。雖然楊氏模數只是線性段的斜率，理論上的計算非常簡單，只要把線性段的任何一點應力除以應變就可以得到。但為什麼還要大費周章使用迴歸分析來計算呢? 我認為問題點如下:</p>
+<ul>
+<li><strong>線性段區域的範圍不是固定</strong>: 有的材料 50MPa 以上就超出線性範圍，但是有的材料則是 300MPa 以上才是。想要自動化的廣泛應用的話就不能取特定應力下的應變值來計算。</li>
+<li><strong>現實數據並非完美直線</strong>: 真正的實驗數據並不會像理論上那樣完美從原點出發，所以必須取線性範圍內的最大與最小應力的兩個點位去計算斜率。且並非線性範圍都維持固定斜率，所以需要肉眼找出線性範圍的位置，當測試數量一多的時候光分析數據就會很花時間。</li>
+<li><strong>判定直線範圍的方法沒有統一條件</strong>: 如果是用肉眼找出線性範圍，則每個人的選完的範圍就會有差異，甚至是每個人在不同時段下選擇的範圍也會有差異。如此就會造成楊氏模數判斷上的差異。</li>
+</ul>
+<p><img src="/images/post/modulus-original-curve.png" alt="原始圖片"></p>
+<blockquote>
+<p>判定直線範圍的方法沒有統一標準</p>
+</blockquote>
+<h3 id="如何使用迴歸分析計算斜率">如何使用迴歸分析計算斜率?</h3>
+<p>如果要使用迴歸分析計算斜率，第一步是要取出直線段。如果要用程式自動化切出直線部分的話，就需要先定義好取出條件。
+目前我會建議以下兩種條件:</p>
+<ol>
+<li>找出應力的最大值，往前取出所有線段。</li>
+<li>找出應力的最大值，取出前段應力值介於最大值 20 ~ 80% (上下限可依需求調整，不一定需要固定在 20 跟 80) 之間的線段。</li>
+</ol>
+<p>第二步就是取出直線段後，再進行迴歸分析，即可得到斜率，也就是彈性模數。</p>
+<p>兩種取直線的方式各有優缺點。第一種方式很泛用，但一開始就會納入很大部分的非直線線段(不論是塑性段還是雜訊)，導致迴歸出來的效果不佳。第二種方式有很大機會排除掉非線性段，讓迴歸出來的斜率準確度高。但是因為每種材料的特性不一，需要針對不同材料微調上下限，比較不泛用。</p>
+<h3 id="如何滿足泛用且自動化">如何滿足泛用且自動化</h3>
+<p>所以如果想要自動化且泛用的話，就必須使用第一種方式，但需要加上第三步 - 持續修正。
+利用第一種方式做完迴歸後，因為包含比較多的非線性線段，所以得到的直線在後半段接近降伏的部分誤差會較大，也可以明顯看出 $R^2$ 值較差。
+下一步便是找出誤差大的部分並加以排除，剩下的部分再次進行迴歸分析。
+如此重複以上的循環，直到 $R^2$ 大於某個程度，例如 0.96 以上才停止。此時得到的直線便是這筆測試資料的最佳線性段。
+而如果是屬於降伏點不明顯的材料（如大部分的金屬），則可以利用此直線方程式，offset 0.2% 作出新的方程式，將新的方程式延伸找出與原始曲線相交的位置，此位置對應的應力、應變值便是對評估材料強度也很重要的參數：降伏應力與應變。
+而如何找出兩條線段的相交點呢？最簡單的方式就是分別取出最大值與非線性段間的數值。通常來說，原始資料在降伏應變前會大於直線方程式計算出來的應力值，降伏應變後則會小於。所以只要將兩者相減，找出變號的位置，即是降伏點。</p>
+<p><img src="/images/post/modulus-regression-curve.png" alt="regression chart"></p>
+<blockquote>
+<p>利用迴歸分析找出直線區域與計算降伏應力</p>
+</blockquote>
+<h3 id="結論">結論</h3>
+<p>利用迴歸分析找出斜率的方式可以應用在很多不同的領域與狀況。用這種方法搭配簡易的程式語言，就可以準確而且大量自動化分析數據。
+利用程式語言搭配迴歸分析解析數據是我這幾年以來最常用的數據分析手法。學習基本的程式開發與統計分析，則是我這幾年來最划算的時間投資。</p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hj-kurt-su" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <a href="https://HJ-Kurt-Su.github.io"><img src="https://HJ-Kurt-Su.github.io/images/logo.png" alt="Kurt&#39;s Home (Phonon Observer)"></a>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Contact Me</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark" href="tel:09xx-xxx-x99"><i
+                class="ti-mobile mr-3 text-primary"></i>09xx-xxx-x99</a></li>
+          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Taiwan</li>
+          <li class="mb-3"><a class="text-dark" href="mailto:phononobserver@gmail.com"><i
+                class="ti-email mr-3 text-primary"></i>phononobserver@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social Contacts</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.linkedin.com/in/kurt-su-503a2a71/">linkedin</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://www.facebook.com/kurt.su.9">facebook</a></li>
+          
+          <li class="mb-3"><a class="text-dark" href="https://github.com/HJ-Kurt-Su">github</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Categories</h6>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/software">Software</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/statistics">Statistics</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/%e5%bf%83%e5%be%97">心得</a>
+          </li>
+          <li class="mb-3"><a class="text-dark"
+              href="/categories/%e6%8a%95%e8%b3%87%e7%90%86%e8%b2%a1">投資理財</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-3"><a class="text-dark" href="https://HJ-Kurt-Su.github.io/about">About</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-12 border-top py-4 text-center">
+        | copyright © 2020 <a href="https://themefisher.com">Themefisher</a> All Rights Reserved |
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://HJ-Kurt-Su.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/mark.js"></script>
+
+<script src="https://HJ-Kurt-Su.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://HJ-Kurt-Su.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script></body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modulus on Kurt&#39;s Home (Phonon Observer)</title>
+    <link>https://HJ-Kurt-Su.github.io/tags/modulus/</link>
+    <description>Recent content in Modulus on Kurt&#39;s Home (Phonon Observer)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 18 Apr 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://HJ-Kurt-Su.github.io/tags/modulus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何利用線性迴歸（Linear Regression）計算材料的彈性模數 (Modulus)</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</link>
+      <pubDate>Sun, 18 Apr 2021 21:30:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</guid>
+      <description>Photo by Lucas Lenzi on Unsplash
+什麼是彈性模數? 以下引述維基百科
+楊氏模數，也稱楊氏模數（英語：Young&amp;rsquo;s modulus），一般將楊氏模數習慣稱爲彈性模量，是材料力學中的名詞。彈性材料承受正向應力時會產生正向應變，在形變量沒有超過對應材料的一定彈性限度時，定義正向應力與正向應變的比值為這種材料的楊氏模數。公式記為</description>
+    </item>
+    
+  </channel>
+</rss>

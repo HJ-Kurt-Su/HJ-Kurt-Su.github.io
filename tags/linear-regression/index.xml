@@ -6,10 +6,17 @@
     <description>Recent content in Linear Regression on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 03 Feb 2021 21:30:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://HJ-Kurt-Su.github.io/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 18 Apr 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://HJ-Kurt-Su.github.io/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何利用線性迴歸（Linear Regression）計算材料的彈性模數 (Modulus)</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</link>
+      <pubDate>Sun, 18 Apr 2021 21:30:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</guid>
+      <description>Photo by Lucas Lenzi on Unsplash
+什麼是彈性模數? 以下引述維基百科
+楊氏模數，也稱楊氏模數（英語：Young&amp;rsquo;s modulus），一般將楊氏模數習慣稱爲彈性模量，是材料力學中的名詞。彈性材料承受正向應力時會產生正向應變，在形變量沒有超過對應材料的一定彈性限度時，定義正向應力與正向應變的比值為這種材料的楊氏模數。公式記為</description>
+    </item>
     
     <item>
       <title>如何利用線性迴歸（Linear Regression）分析計算阻尼係數（Damping Ratio）</title>
@@ -19,7 +26,7 @@
       <guid>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</guid>
       <description>Photo by Kelly Sikkema on Unsplash
 什麼是阻尼係數？有什麼用？ 什麼是阻尼？阻尼是振動領域很常使用的一個性質，主要特性是能抵銷能量，且抵銷能量的能力會隨著速度越快而越強大。 以下引述維基百科：
- 阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</description>
+阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</description>
     </item>
     
   </channel>

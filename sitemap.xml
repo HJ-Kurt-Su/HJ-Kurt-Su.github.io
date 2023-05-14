@@ -1,220 +1,140 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://HJ-Kurt-Su.github.io/blog/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/categories/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/linear-regression/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/modulus/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/categories/statistics/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/tags/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</loc>
+    <lastmod>2021-04-18T21:30:00+08:00</lastmod>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/damping-ratio/</loc>
     <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://HJ-Kurt-Su.github.io/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://HJ-Kurt-Su.github.io/tags/linear-regression/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://HJ-Kurt-Su.github.io/categories/statistics/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://HJ-Kurt-Su.github.io/tags/</loc>
-    <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</loc>
     <lastmod>2021-02-03T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/okr/</loc>
     <lastmod>2021-01-30T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20210130-your-okr-is-not-okr/</loc>
     <lastmod>2021-01-30T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/categories/%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2021-01-30T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/assest-allocation/</loc>
     <lastmod>2020-12-27T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/categories/%E6%8A%95%E8%B3%87%E7%90%86%E8%B2%A1/</loc>
     <lastmod>2020-12-27T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20201227-experience-financial-advisor/</loc>
     <lastmod>2020-12-27T21:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/covid19/</loc>
     <lastmod>2020-11-22T21:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/popular-science/</loc>
     <lastmod>2020-11-22T21:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/probability/</loc>
     <lastmod>2020-11-22T21:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20201122-why-not-screen-everyone-covid19/</loc>
     <lastmod>2020-11-22T21:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20200803-introduction-lnb/</loc>
     <lastmod>2020-08-03T22:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/p2p-lending/</loc>
     <lastmod>2020-08-03T22:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/passive-income/</loc>
     <lastmod>2020-08-03T22:45:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/chart/</loc>
     <lastmod>2020-07-09T22:20:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20200709-notice-item-chart/</loc>
     <lastmod>2020-07-09T22:20:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/open-source/</loc>
     <lastmod>2020-06-26T17:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/categories/software/</loc>
     <lastmod>2020-06-26T17:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20200626-introduction-engauge-digitizer/</loc>
     <lastmod>2020-06-26T17:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/children/</loc>
     <lastmod>2020-06-26T10:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20200626-my-childs-allowance/</loc>
     <lastmod>2020-06-26T10:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/hahow/</loc>
     <lastmod>2020-06-09T23:35:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/website/</loc>
     <lastmod>2020-06-09T23:35:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</loc>
     <lastmod>2020-06-09T23:35:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/about/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/contact/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/search/</loc>
     <lastmod>2019-10-29T13:49:23+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/etf/</loc>
     <lastmod>2019-06-12T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190612-asset-allocation-myown/</loc>
     <lastmod>2019-06-12T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190508-compare-with-master-allocation/</loc>
     <lastmod>2019-05-08T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190507-asset-performance-backtest/</loc>
     <lastmod>2019-05-07T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190504-assets-performance/</loc>
     <lastmod>2019-05-04T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190430-stock-bond-assest-property/</loc>
     <lastmod>2019-04-30T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190329-introduction-0050/</loc>
     <lastmod>2019-03-29T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/tags/review/</loc>
     <lastmod>2019-03-22T22:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://HJ-Kurt-Su.github.io/blog/20190322-investment-experience/</loc>
     <lastmod>2019-03-22T22:00:00+08:00</lastmod>
   </url>
-  
 </urlset>

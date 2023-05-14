@@ -6,10 +6,17 @@
     <description>Recent content on Kurt&#39;s Home (Phonon Observer)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 03 Feb 2021 21:30:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://HJ-Kurt-Su.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 18 Apr 2021 21:30:00 +0800</lastBuildDate><atom:link href="https://HJ-Kurt-Su.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何利用線性迴歸（Linear Regression）計算材料的彈性模數 (Modulus)</title>
+      <link>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</link>
+      <pubDate>Sun, 18 Apr 2021 21:30:00 +0800</pubDate>
+      
+      <guid>https://HJ-Kurt-Su.github.io/blog/20210418-calculate-youngs-mouduls-by-regression/</guid>
+      <description>Photo by Lucas Lenzi on Unsplash
+什麼是彈性模數? 以下引述維基百科
+楊氏模數，也稱楊氏模數（英語：Young&amp;rsquo;s modulus），一般將楊氏模數習慣稱爲彈性模量，是材料力學中的名詞。彈性材料承受正向應力時會產生正向應變，在形變量沒有超過對應材料的一定彈性限度時，定義正向應力與正向應變的比值為這種材料的楊氏模數。公式記為</description>
+    </item>
     
     <item>
       <title>如何利用線性迴歸（Linear Regression）分析計算阻尼係數（Damping Ratio）</title>
@@ -19,7 +26,7 @@
       <guid>https://HJ-Kurt-Su.github.io/blog/20210203-calculate-damping-ratio-by-linear-regression/</guid>
       <description>Photo by Kelly Sikkema on Unsplash
 什麼是阻尼係數？有什麼用？ 什麼是阻尼？阻尼是振動領域很常使用的一個性質，主要特性是能抵銷能量，且抵銷能量的能力會隨著速度越快而越強大。 以下引述維基百科：
- 阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</description>
+阻尼（英語：damping）是指任何振動系統在振動中，由於外界作用（如流體阻力、摩擦力等）和/或系統本身固有的原因引起的振動幅度逐漸下降的特性，以及此一特性的量化表徵。</description>
     </item>
     
     <item>
@@ -50,7 +57,7 @@ OKR 講座 學會OKR，在2021年高速成長 基於想要多了解 OKR 的內�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20201122-why-not-screen-everyone-covid19/</guid>
       <description>Photo by Mufid Majnun on Unsplash
- 此為Hahow 線上課程 職場寫作課的作業 - 寫下你的科普教學文。</description>
+此為Hahow 線上課程 職場寫作課的作業 - 寫下你的科普教學文。</description>
     </item>
     
     <item>
@@ -60,7 +67,8 @@ OKR 講座 學會OKR，在2021年高速成長 基於想要多了解 OKR 的內�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20200803-introduction-lnb/</guid>
       <description>Photo by Steve Johnson on Unsplash
- 此為Hahow 線上課程 打造被動收入的作業之一。加入實作一年後的報酬率與心得評估</description>
+此為Hahow 線上課程 打造被動收入的作業之一。加入實作一年後的報酬率與心得評估
+信用市集: 感覺起來介面較先進且友善，有蘿蔔投+可以自行分散金額到不同案件。 LnB 推薦連結</description>
     </item>
     
     <item>
@@ -70,8 +78,8 @@ OKR 講座 學會OKR，在2021年高速成長 基於想要多了解 OKR 的內�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20200709-notice-item-chart/</guid>
       <description>Photo by Lukas Blazek on Unsplash
- 本篇是實體課程Google 圖表簡報術李柏鋒老師部分的課後心得整理
- TL;DR  好的圖表能提高理解資料的效率 要表達的目的決定該圖表的重點與雜訊，淡化雜訊後再加強重點 立體圖、圓餅圖、非零原點與雙軸圖是需要避免的圖表顯示方式  何謂圖表 在介紹圖表誤區前，先簡單定義一下何謂圖表，以及什麼是好的圖表。</description>
+本篇是實體課程Google 圖表簡報術李柏鋒老師部分的課後心得整理
+TL;DR 好的圖表能提高理解資料的效率 要表達的目的決定該圖表的重點與雜訊，淡化雜訊後再加強重點 立體圖、圓餅圖、非零原點與雙軸圖是需要避免的圖表顯示方式 何謂圖表 在介紹圖表誤區前，先簡單定義一下何謂圖表，以及什麼是好的圖表。</description>
     </item>
     
     <item>
@@ -92,7 +100,9 @@ Download Page</description>
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20200626-my-childs-allowance/</guid>
       <description>Photo by Michael Longmire on Unsplash
-TL;DR   首要是要讓小孩有想要且具體的目標，從動機層面開始後續可以少很多嘗試錯誤，偏偏這是最難的。我目前也沒有做好。</description>
+TL;DR 首要是要讓小孩有想要且具體的目標，從動機層面開始後續可以少很多嘗試錯誤，偏偏這是最難的。我目前也沒有做好。
+可以的話，先讓小孩擁有一些小額金錢(定期或不定期我覺得沒差)，觀察小孩如何花費。再來適時讓小孩了解這樣的花費方式會有什麼後果(或好處)。
+以我目前小孩的階段(幼稚園到國小低年級)，我認為是非常好養成良好金錢觀的時期。</description>
     </item>
     
     <item>
@@ -102,7 +112,7 @@ TL;DR   首要是要讓小孩有想要且具體的目標，從動機層面開始
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20200609-blog-origin/</guid>
       <description>Photo by Anete Lūsiņa on Unsplash
-Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課：從個人品牌到自媒體 部落格緣起:  身為一個工程師，當然要用工程師的方式來展示自己啦</description>
+Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課：從個人品牌到自媒體 部落格緣起: 身為一個工程師，當然要用工程師的方式來展示自己啦</description>
     </item>
     
     <item>
@@ -112,7 +122,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190612-asset-allocation-myown/</guid>
       <description>Photo by Josh Appel on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -122,7 +133,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190508-compare-with-master-allocation/</guid>
       <description>Photo by Angela Compagnone on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -132,7 +144,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190507-asset-performance-backtest/</guid>
       <description>Photo by Micheile Henderson on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -142,7 +155,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190504-assets-performance/</guid>
       <description>Photo by Markus Winkler on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -152,7 +166,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190430-stock-bond-assest-property/</guid>
       <description>Photo by Chris Liverani on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -162,7 +177,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190329-introduction-0050/</guid>
       <description>Photo by Jamie Street on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
     <item>
@@ -172,7 +188,8 @@ Github 免費架站術！輕鬆打造個人品牌 同場加映: 職場寫作課�
       
       <guid>https://HJ-Kurt-Su.github.io/blog/20190322-investment-experience/</guid>
       <description>Photo by Precondo CA on Unsplash
- 本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章</description>
+本篇文章為2019年時參加Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置學習營的任務文章
+Hahow課程: ETF 投資全球：帶你量身打造專屬資產配置</description>
     </item>
     
   </channel>
